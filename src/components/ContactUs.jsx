@@ -64,7 +64,11 @@ const ContactUs = () => {
 
   return (
     <section style={styles.section}>
-      <h2 style={styles.heading}>Contact Us</h2>
+      <h2 className="text-3xl font-extrabold mt-10 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
+        Contact Us
+      </h2>
+      <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+
       <p style={styles.subheading}>
         Have questions or need assistance? Send us a message and we'll respond
         promptly.
@@ -173,6 +177,7 @@ const ContactUs = () => {
           {submitStatus && <p style={styles.success}>{submitStatus}</p>}
         </form>
       </div>
+      <ResponsiveStyle />
     </section>
   );
 };
@@ -199,21 +204,26 @@ const styles = {
     fontSize: "1.1rem",
   },
   container: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "30px",
-    justifyContent: "space-between",
-  },
+  display: 'flex',
+  flexDirection: 'row',   // Default direction: side-by-side
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+  gap: '2rem',
+  flexWrap: 'wrap',       // Allows wrapping on small screens
+  width: '100%',
+  marginBottom: '2rem',
+},
   contactCard: {
-    flex: "0 1 40%", // don't grow
-    alignSelf: "flex-start", // align to top
+    flex: "0 1 40%",
+    alignSelf: "flex-start",
     backgroundColor: "#f0f8ff",
     border: "1px solid #cce0ff",
     borderRadius: "10px",
     padding: "20px",
     boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
     minWidth: "280px",
-    marginTop: "140px",
+    marginTop: "0",
+    marginLeft: "40px",   // Added left margin here
     marginRight: "20px",
   },
   cardTitle: {
@@ -222,17 +232,24 @@ const styles = {
     color: "#003366",
   },
   form: {
-    flex: "1 1 55%",
-    display: "flex",
-    flexDirection: "column",
-    minWidth: "280px",
-  },
+  flex: '1 1 45%',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+},
+
+image: {
+  flex: '1 1 45%',
+  maxWidth: '100%',
+  borderRadius: '8px',
+  boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+},
   label: {
     display: "flex",
     flexDirection: "column",
     marginBottom: "20px",
     fontWeight: "600",
-    color: "#003366",
+    color: "#38B2AC",
   },
   input: {
     padding: "10px",
@@ -275,4 +292,44 @@ const styles = {
   },
 };
 
+// Add media queries via a React component for styling
+const ResponsiveStyle = () => (
+  <style>{`
+    @media (max-width: 768px) {
+      div[style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      div[style*="flex: 0 1 40%"] {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-top: 20px !important;
+      }
+      form[style*="flex: 1 1 55%"] {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      div[style*="display: flex"][style*="flex-wrap: wrap"] {
+        flex-direction: row!important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+      }
+      div[style*="flex: 0 1 40%"] {
+        flex: 0 1 40% !important;
+        max-width: 40% !important;
+        margin-left: 0 !important;
+        margin-right: 30px !important;
+      }
+      form[style*="flex: 1 1 55%"] {
+        flex: 1 1 55% !important;
+        max-width: 55% !important;
+      }
+    }
+  `}</style>
+);
 export default ContactUs;

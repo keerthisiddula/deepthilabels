@@ -1,16 +1,13 @@
 // constants/index.js
 
-// constants.js
-// src/constants.js (or wherever you keep navLinks)
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+
 export const navLinks = [
   { id: 'home', title: 'Home' },
-  { id: 'productsServices', title: 'Products & Services' },
+  { id: 'explore', title: 'Explore' },
   { id: 'aboutus', title: 'About Us' },
-  { id : 'contactus', title: 'Contact Us' }
+  { id: 'contactus', title: 'Contact Us' },
 ];
-
-
-
 
 export const features = [
   {
@@ -30,25 +27,6 @@ export const features = [
     title: "Bulk & Small Orders",
     content:
       "No order is too big or too small — we deliver quality regardless of quantity.",
-  },
-];
-
-
-export const clients = [
-  {
-    id: "client-1",
-    name: "ABC Brands",
-    feedback: "Exceptional quality and turnaround time!",
-  },
-  {
-    id: "client-2",
-    name: "XYZ Industries",
-    feedback: "The custom labels were exactly what we needed.",
-  },
-  {
-    id: "client-3",
-    name: "FreshMart",
-    feedback: "Great team to work with and amazing results.",
   },
 ];
 
@@ -74,19 +52,14 @@ export const footerLinks = [
 
 export const socialMedia = [
   {
-    id: "social-media-1",
-    icon: "facebook", // replace with actual image path or icon name
-    link: "https://www.facebook.com/",
-  },
-  {
     id: "social-media-2",
-    icon: "instagram", // replace with actual image path or icon name
+    icon: FaInstagram,
     link: "https://www.instagram.com/deepthilabelsofficial",
   },
   {
     id: "social-media-3",
-    icon: "linkedin", // replace with actual image path or icon name
-    link: "https://www.linkedin.com/",
+    icon: FaTwitter,
+    link: "https://www.twitter.com/",
   },
 ];
 

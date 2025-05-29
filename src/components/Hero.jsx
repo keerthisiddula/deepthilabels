@@ -1,44 +1,47 @@
-import styles from '../style'
-import { discount, robot } from '../assets'
+import styles from '../style';
+import { robot } from '../assets';
 
 const Hero = () => {
   return (
-    <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      
-      {/* Image on the Left */}
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img
-          src={robot}
-          alt='label printer'
-          className='w-[85%] h-[80%] relative z-[5] mr-10 rounded-xl'
-        />
-        <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
-        <div className="absolute z-[1] w-[80%] h-[80%] rounded-full white__gradient bottom-40" />
-        <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
-      </div>
-
-      {/* Text on the Right */}
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className='flex flex-col w-full mt-0 mr-10'>
-          <h1 className='font-poppins font-semibold ss:text-[68px] text-[48px] text-white ss:leading-[100.8px] leading-[75px]'>
-            Creating
-          </h1>
-          <h1 className='font-poppins font-semibold ss:text-[68px] text-[48px] text-gradient ss:leading-[100.8px] leading-[75px] whitespace-nowrap'>
-            Custom Labels
-          </h1>
-          <h1 className='font-poppins font-semibold ss:text-[68px] text-[48px] text-white ss:leading-[100px] leading-[75px] w-full'>
-            with precision.
-          </h1>
+    <section id="home" className={`${styles.paddingY}`}>
+      {/* Container for consistent horizontal spacing */}
+      <div className="max-w-[1200px] mx-auto px-6 sm:px-10 md:px-16 flex md:flex-row flex-col items-center">
+        
+        {/* Left: Image */}
+        <div className="flex-1 flex justify-center md:justify-start">
+          <img
+            src={robot}
+            alt="label printer"
+            className="
+              mt-24 mb-1
+              w-[280px] h-[180px]  /* Mobile default smaller size */
+              sm:w-[380px] sm:h-[260px] /* Slightly bigger on small screens */
+              md:w-[480px] md:h-[320px] /* Desktop size */
+              rounded-xl
+            "
+          />
         </div>
 
-        <p className={`${styles.paragraph} max-w-[450px] mt-5 font-normal`}>
-          Delivering high-quality, tailor-made labels that 
-          bring your brand’s vision to life with unmatched accuracy and style.  
-        </p>
+        {/* Right: Text */}
+        <div className="flex-1 flex flex-col justify-center mt-12 md:mt-24 md:pl-12 text-center md:text-left">
+          <h1 className="font-poppins font-semibold text-white text-[48px] ss:text-[62px] leading-[75px] ss:leading-[100.8px]">
+            Creating
+          </h1>
+          <h1 className="font-poppins font-semibold text-gradient text-[48px] ss:text-[62px] leading-[75px] ss:leading-[100.8px] whitespace-nowrap">
+            Custom Labels
+          </h1>
+          <h1 className="font-poppins font-semibold text-white text-[48px] ss:text-[62px] leading-[75px] ss:leading-[100.8px] w-full">
+            with precision.
+          </h1>
+
+          <p className="mt-4 max-w-[450px] mx-auto md:mx-0 text-[15px] font-normal text-white">
+            Delivering high-quality, tailor-made labels that bring your brand’s
+            vision to life with unmatched accuracy and style.
+          </p>
+        </div>
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

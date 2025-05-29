@@ -79,13 +79,20 @@ const servicesList = [
 const ExploreDetails = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 py-16 font-sans text-white">
+      <div className="bg-gradient-to-br from-gray-800 to-gray-900 bg-opacity-70 rounded-xl shadow-2xl p-8 max-w-4xl mx-auto mt-16 mb-12 backdrop-blur-md border border-gray-700">
+        <p className="text-lg text-center text-gray-300 leading-relaxed">
+          Empower your business with advanced barcode and labeling technology built for speed, precision, and durability.  
+          From high-performance barcode printers to versatile labeling solutions, we provide everything you need to streamline your operations.  
+          Discover products that combine innovation, quality, and reliability — crafted to support businesses across every industry.
+        </p>
+      </div>
       {/* Section: Barcode Printers & Scanners */}
       <section className="mb-20">
-        <h2 className="text-4xl font-extrabold mt-17 mb-10 text-center text-gradient bg-gradient-to-r from-blue-400 to-purple-600">
+        <h2 className="text-3xl font-extrabold mt-14 mb-4 text-center text-gradient bg-gradient-to-r from-blue-400 to-purple-600">
           Barcode Printers & Scanners
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-90">
           {printersAndScanners.map(({ id, title, img, bio }) => (
             <div
               key={id}
@@ -112,9 +119,10 @@ const ExploreDetails = () => {
 
       {/* Section: Self-Adhesive Labels */}
       <section className="mb-20">
-        <h2 className="text-4xl font-extrabold mt-20 mb-20 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
+        <h2 className="text-3xl font-extrabold mt-20 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
           Self-Adhesive Labels
         </h2>
+        <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
         <div className="flex flex-wrap justify-center gap-12">
   {labelVariants.map(({ id, name, img, bio }) => (
     <div
@@ -138,30 +146,6 @@ const ExploreDetails = () => {
     </div>
   ))}
 </div>
-
-
-      </section>
-
-      {/* Section: Services */}
-      <section>
-        <h2 className="text-4xl font-extrabold mb-16 text-center text-gradient bg-gradient-to-r from-purple-400 to-pink-600">
-          Our Services
-        </h2>
-        <div className="flex flex-col md:flex-row gap-12 justify-center items-stretch">
-          {servicesList.map(({ id, title, desc }) => (
-            <div
-              key={id}
-              className="bg-gray-900 rounded-3xl p-8 w-full md:w-1/3 text-center shadow-2xl cursor-pointer transform transition duration-500 hover:scale-105"
-              role="article"
-              aria-label={title}
-            >
-              <h5 className="text-2xl font-semibold text-purple-400 mb-4 tracking-wide">
-                {title}
-              </h5>
-              <p className="text-gray-300 text-base leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
       </section>
     </div>
   );

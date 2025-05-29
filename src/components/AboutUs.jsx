@@ -5,7 +5,10 @@ const AboutUs = () => {
     <section id="aboutus" className="text-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Introduction */}
-        <h2 className="text-4xl font-bold mb-8 inline-block text-center">About Us</h2>
+        <h2 className="text-3xl font-extrabold mt-6 mb-5 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
+        About Us
+      </h2>
+      <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
         <p className="text-lg leading-relaxed mb-8">
           Hi, I'm <span className="font-semibold text-blue-500">Raju Siddula</span>, the founder of <span className="font-semibold text-blue-400">Deepthi Labels</span>.
           With over <span className="font-semibold">20+ years of experience</span> in the labeling industry,
@@ -15,7 +18,8 @@ const AboutUs = () => {
 
         {/* Business Profile */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-4 text-blue-300">Business Profile</h3>
+          <h3 className="text-2xl font-bold mb-4 text-gradient bg-gradient-to-r from-green-400 to-teal-600">Business Profile</h3>
+          
           <p className="text-base leading-relaxed">
             <span className="font-semibold">M/s. DEEPTHI LABELS</span> is a label manufacturing company based out of
             Hyderabad, serving multiple industries across India. We supply all types of self-adhesive labels,
@@ -25,7 +29,7 @@ const AboutUs = () => {
 
         {/* Mission & Values */}
         <div>
-          <h3 className="text-2xl font-semibold mb-4 text-blue-300">Our Mission & Values</h3>
+          <h3 className="text-2xl font-bold mb-4 text-gradient bg-gradient-to-r from-green-400 to-teal-600">Our Mission & Values</h3>
           <p className="text-base leading-relaxed mb-4">
             Our mission is to be the <span className="font-semibold">premier choice</span> for labeling solutions by offering
             exceptional products, outstanding customer service, and innovative solutions.

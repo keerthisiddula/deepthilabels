@@ -28,15 +28,30 @@ We customize the labels as per the end-users requirements to enhance your produc
 const ProductsServices = () => {
   const navigate = useNavigate();
 
-  const handleExploreClick = () => {
-    navigate('/explore');  // navigate programmatically
-  };
+const handleExploreClick = () => {
+  // Temporarily disable smooth scroll
+  document.documentElement.style.scrollBehavior = 'auto';
+
+  // Navigate to exploredetails page
+  navigate('/explore');
+
+  // Scroll instantly to top
+  window.scrollTo(0, 0);
+
+  // Re-enable smooth scroll after a small delay (to not affect future scrolls)
+  setTimeout(() => {
+    document.documentElement.style.scrollBehavior = '';
+  }, 100);
+};
+
+
 
   return (
     <section className="py-10 px-6 min-h-screen">
-      <h2 className="text-center text-3xl font-semibold mb-10 text-white">
+      <h2 className="text-3xl font-extrabold mt-24 mb-4 text-center leading-relaxed text-gradient bg-gradient-to-r from-green-400 to-teal-600">
         Your go-to solution for high-quality labeling products and services.
       </h2>
+      <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
       <div className="flex flex-col md:flex-row gap-8 justify-center">
         {services.map((service, index) => (
           <div
@@ -52,7 +67,7 @@ const ProductsServices = () => {
                 className="rounded-xl"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-center">{service.title}</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center text-purple-600">{service.title}</h3>
             <p className="whitespace-pre-line text-center leading-relaxed">{service.description}</p>
           </div>
         ))}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { features } from '../constants'; // Your features array without icons
 import styles, { layout } from '../style';
-import Button from './Button';
 
 const FeatureCard = ({ title, content, index }) => (
   <div
@@ -9,10 +8,10 @@ const FeatureCard = ({ title, content, index }) => (
       index !== features.length - 1 ? 'mb-6' : 'mb-0'
     } feature-card bg-gray-800`}
   >
-    <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23px] mb-3">
+    <h4 className="text-[18px] font-bold mb-3 text-purple-600">
       {title}
     </h4>
-    <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[24px]">
+    <p className="font-poppins font-normal text-dimWhite text-[15px] leading-[24px]">
       {content}
     </p>
   </div>
@@ -32,10 +31,13 @@ const Business = () => {
       </div>
       <div className={`${layout.sectionInfo} flex-1`}>
         {/* Heading on right */}
-        <h2 className={styles.heading2}>
-          Elevate Your Brand <br className="sm:block hidden" /> with Custom Labels
-        </h2>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
+        <div className="text-center">
+          <h2 className={`${styles.heading2} text-4xl font-extrabold mt-18 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600`}>
+            Elevate Your Brand with Custom Labels
+          </h2>
+          <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+        </div>
+        <p className={`${styles.paragraph} text-[15.5px] max-w-[470px] ml-6 mt-2`}>
           We specialize in delivering high-quality, precision-crafted labels that
           perfectly represent your brand’s identity. Whether you need small batches
           or bulk production, we’ve got you covered.
