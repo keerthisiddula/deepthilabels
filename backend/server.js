@@ -52,11 +52,11 @@ app.post("/send-email", async (req, res) => {
 });
 
 // Serve static React files after build
-app.use(express.static(path.join(__dirname, '..', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'dist')));
 
 // Fallback to React for all other routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
 });
 
 // Start server last
