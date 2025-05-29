@@ -2,6 +2,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require('path');
 
 const app = express();
 app.use(cors());
@@ -55,3 +56,13 @@ app.post("/send-email", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+// Serve static React files after build
+app.use(express.static(path.join(__dirname, '..', 'build')));
+
+// Fallback to React for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+});
+
