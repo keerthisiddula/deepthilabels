@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { navLinks } from '../constants';
 
+
+
 const exploreSubmenu = [
   { id: 'services', title: 'Services' },
   { id: 'industries', title: 'Industries' },
@@ -80,7 +82,7 @@ const Navbar = () => {
       <div className="flex items-center">
         <Link to="/">
           <img
-            src="src/assets/logo.png"
+            src="/logo.png"
             alt="Deepthi Labels"
             className="w-[70px] h-[68px] rounded-full object-cover p-1"
           />

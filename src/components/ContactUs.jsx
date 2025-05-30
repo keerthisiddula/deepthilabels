@@ -40,7 +40,7 @@ const ContactUs = () => {
     if (!validate()) return;
 
     try {
-      const res = await fetch("http://localhost:5000/send-email", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/send-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -188,29 +188,16 @@ const styles = {
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     color: "#333",
   },
-  heading: {
-    fontSize: "2.2rem",
-    marginBottom: "10px",
-    textAlign: "center",
-    color: "white",
-    fontWeight: 700,
-  },
-  subheading: {
-    textAlign: "center",
-    marginBottom: "30px",
-    color: "#555",
-    fontSize: "1.1rem",
-  },
   container: {
-  display: 'flex',
-  flexDirection: 'row',   // Default direction: side-by-side
-  justifyContent: 'space-between',
-  alignItems: 'flex-start',
-  gap: '2rem',
-  flexWrap: 'wrap',       // Allows wrapping on small screens
-  width: '100%',
-  marginBottom: '2rem',
-},
+    display: "flex",
+    flexDirection: "row", // Default direction: side-by-side
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    gap: "2rem",
+    flexWrap: "wrap", // Allows wrapping on small screens
+    width: "100%",
+    marginBottom: "2rem",
+  },
   contactCard: {
     flex: "0 1 40%",
     alignSelf: "flex-start",
@@ -221,7 +208,7 @@ const styles = {
     boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
     minWidth: "240px",
     marginTop: "0",
-    marginLeft: "40px",   // Added left margin here
+    marginLeft: "40px", // Added left margin here
     marginRight: "20px",
   },
   cardTitle: {
@@ -230,18 +217,11 @@ const styles = {
     color: "#003366",
   },
   form: {
-  flex: '1 1 45%',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '0.8rem',
-},
-
-image: {
-  flex: '1 1 45%',
-  maxWidth: '100%',
-  borderRadius: '8px',
-  boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-},
+    flex: "1 1 45%",
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.8rem",
+  },
   label: {
     display: "flex",
     flexDirection: "column",
@@ -290,7 +270,6 @@ image: {
   },
 };
 
-// Add media queries via a React component for styling
 const ResponsiveStyle = () => (
   <style>{`
     @media (max-width: 768px) {
@@ -305,7 +284,7 @@ const ResponsiveStyle = () => (
         margin-left: 0 !important;
         margin-top: 20px !important;
       }
-      form[style*="flex: 1 1 55%"] {
+      form[style*="flex: 1 1 45%"] {
         flex: 1 1 100% !important;
         max-width: 100% !important;
       }
@@ -313,7 +292,7 @@ const ResponsiveStyle = () => (
 
     @media (min-width: 1024px) {
       div[style*="display: flex"][style*="flex-wrap: wrap"] {
-        flex-direction: row!important;
+        flex-direction: row !important;
         align-items: flex-start !important;
         justify-content: space-between !important;
       }
@@ -323,11 +302,12 @@ const ResponsiveStyle = () => (
         margin-left: 0 !important;
         margin-right: 30px !important;
       }
-      form[style*="flex: 1 1 55%"] {
-        flex: 1 1 55% !important;
-        max-width: 55% !important;
+      form[style*="flex: 1 1 45%"] {
+        flex: 1 1 45% !important;
+        max-width: 45% !important;
       }
     }
   `}</style>
 );
+
 export default ContactUs;
