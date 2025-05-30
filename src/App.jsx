@@ -8,7 +8,6 @@ import {
   ExploreDetails,
   Hero,
   Stats,
-  Business,
   ProductsServices,
   AboutUs,
   Testimonials,
@@ -23,7 +22,6 @@ import Services from './components/Services';
 import IndustriesWeServe from './components/IndustriesWeServe';
 import Blog from './components/Blog';
 import Welcome from './components/Welcome';
-import WhyChooseUs from './components/WhyChooseUs';
 
 const App = () => {
   const location = useLocation();

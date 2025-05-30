@@ -15,7 +15,7 @@ const TestimonialCard = ({ name, rating, feedback }) => {
           />
         ))}
       </div>
-      <p className="text-white-700 mb-4">"{feedback}"</p>
+      <p className="text-gray-400 mb-4">"{feedback}"</p>
       <h3 className="text-lg font-semibold">{name}</h3>
     </div>
   );

@@ -7,7 +7,7 @@ const Stats = () => {
     <section
       className={`
         ${styles.flexCenter} flex-wrap
-        gap-x-10 gap-y-8 mb-16
+        gap-x-16 gap-y-8 mb-16
         px-4 sm:px-6 md:px-1
         justify-center
       `}

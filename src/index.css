@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --black-gradient: linear-gradient(
     144.39deg,
@@ -137,4 +144,10 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(300px);
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  width:100%;
 }
