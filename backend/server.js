@@ -1,7 +1,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-const path = require("path");
+require('dotenv').config(); // Load environment variables
 
 const app = express();
 app.use(cors());
@@ -13,11 +13,12 @@ const PORT = process.env.PORT || 5000;
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "deepthilabels@gmail.com",
-    pass: "sifv enal recd ulwj", // Use your actual app password here
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
   },
 });
 
+// POST /send-email route
 app.post("/send-email", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
@@ -65,10 +66,10 @@ Business Head, Deepthi Labels
 
   try {
     await transporter.sendMail(adminMailOptions);
-    console.log("Founder email sent successfully.");
+    console.log("Admin email sent successfully.");
   } catch (error) {
-    console.error("Error sending email to founder:", error);
-    return res.status(500).json({ error: "Error sending email to founder" });
+    console.error("Error sending email to admin:", error);
+    return res.status(500).json({ error: "Error sending email to admin" });
   }
 
   try {
@@ -77,13 +78,18 @@ Business Head, Deepthi Labels
     console.log("Thank-you email sent successfully.");
   } catch (error) {
     console.error("Error sending thank-you email to user:", error);
-    // Optional: still send success response to user
+    // Still continue
   }
 
   res.status(200).json({ message: "Emails sent successfully" });
 });
 
-// Start the server
+// ✅ Root route to avoid 404 on Render homepage
+app.get("/", (req, res) => {
+  res.send("Deepthi Labels backend is live ✅");
+});
+
+// Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
