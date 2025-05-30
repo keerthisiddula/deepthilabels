@@ -63,7 +63,7 @@ const handleExploreClick = () => {
               <img
                 src={service.icon}
                 alt={service.title}
-                style={{ width: '180px', height: '180px', objectFit: 'contain' }}
+                style={{ width: '200px', height: '200px', objectFit: 'contain' }}
                 className="rounded-xl"
               />
             </div>

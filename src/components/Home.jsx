@@ -1,30 +1,61 @@
 // src/components/Home.jsx
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
-import Hero from './Hero';
-import ProductsServices from './ProductsServices';
+import Hero from "./Hero";
+import ProductsServices from "./ProductsServices";
+import Stats from "./Stats";
+import AboutUs from "./AboutUs";
+import ClientsMarquee from "./ClientsMarquee";
+import ContactUs from "./ContactUs";
+import InstallationSupport from "./InstallationSupport";
+import Brands from "./Brands";
+import Welcome from "./Welcome"; // ✅ Importing the Welcome component
 
 const Home = () => {
-  const location = useLocation();
+  const [showMainContent, setShowMainContent] = useState(false);
 
-  useEffect(() => {
-    if (location.state && location.state.scrollTo) {
-      const el = document.getElementById(location.state.scrollTo);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [location.state]);
+  const handleGetStarted = () => {
+    setShowMainContent(true);
+
+    // Delay scroll to allow exit animation to finish
+    setTimeout(() => {
+      const homeSection = document.getElementById("home");
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 1100); // longer delay to match exit animation (1s)
+  };
 
   return (
-    <div>
-      <section id="home">
-        <Hero />
-      </section>
+    <>
+      <AnimatePresence mode="wait" initial={false}>
+        {!showMainContent && (
+          <Welcome key="welcome" onGetStarted={handleGetStarted} />
+        )}
+      </AnimatePresence>
 
-      <section id="productsServices">
-        <ProductsServices />
-      </section>
-    </div>
+      {showMainContent && (
+        <>
+          <section id="home">
+            <Hero />
+          </section>
+          <Stats />
+          <section id="explore">
+            <ProductsServices />
+          </section>
+          <InstallationSupport />
+          <Brands />
+          <section id="aboutus">
+            <AboutUs />
+          </section>
+          <ClientsMarquee />
+          <section id="contactus">
+            <ContactUs />
+          </section>
+        </>
+      )}
+    </>
   );
 };
 
