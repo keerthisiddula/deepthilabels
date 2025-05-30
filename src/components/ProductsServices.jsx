@@ -48,7 +48,7 @@ const handleExploreClick = () => {
 
   return (
     <section className="py-10 px-6 min-h-screen">
-      <h2 className="text-3xl font-extrabold mt-24 mb-4 text-center leading-relaxed text-gradient bg-gradient-to-r from-green-400 to-teal-600">
+      <h2 className="text-3xl font-extrabold mt-19 mb-4 text-center leading-relaxed text-gradient bg-gradient-to-r from-green-400 to-teal-600">
         Your go-to solution for high-quality labeling products and services.
       </h2>
       <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
@@ -59,21 +59,21 @@ const handleExploreClick = () => {
             className="flex-1 max-w-sm mx-auto p-6 rounded-xl bg-gray-800 shadow-lg text-white hover:shadow-xl hover:scale-105 hover:bg-gray-800 
                 transition-all duration-300 ease-in-out"
           >
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-3">
               <img
                 src={service.icon}
                 alt={service.title}
-                style={{ width: '200px', height: '200px', objectFit: 'contain' }}
-                className="rounded-xl"
+                className="w-50 h-48 object-cover rounded-2xl shadow-md"
               />
+
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-center text-purple-600">{service.title}</h3>
-            <p className="whitespace-pre-line text-center leading-relaxed">{service.description}</p>
+            <h3 className="text-[24px] font-bold mt-1 mb-3 text-center text-white-600">{service.title}</h3>
+            <p className="whitespace-pre-line text-center text-gray-400 leading-relaxed">{service.description}</p>
           </div>
         ))}
       </div>
 
-      <div className="text-center mt-8">
+      <div className="text-center mt-6">
         <button
           onClick={handleExploreClick}
           className="bg-blue-500 hover:bg-blue-600 transition text-white px-6 py-3 rounded-xl"

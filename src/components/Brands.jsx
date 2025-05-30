@@ -31,11 +31,11 @@ const Brands = () => {
     >
       {/* Printers Section */}
       <div className="mb-16">
-        <h2 className="text-3xl font-extrabold mt-16 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
+        <h2 className="text-3xl font-extrabold mt-28 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
           Trusted Printer Brands
         </h2>
-        <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-10 text-center text-lg leading-relaxed">
+        <div className="w-24 h-1 mx-auto mb-5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+        <p className="text-gray-400 max-w-3xl mx-auto mb-10 text-center text-[18px] leading-relaxed">
           We collaborate with industry-leading printer brands to ensure you get reliable, high-performance printing solutions tailored to your business needs.
         </p>
         <div
@@ -77,8 +77,8 @@ const Brands = () => {
         Leading Scanner Brands
         </h2>
 
-        <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-10 text-center text-lg leading-relaxed">
+        <div className="w-24 h-1 mx-auto mb-5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+        <p className="text-gray-400 max-w-3xl mx-auto mb-10 text-center text-[18px] leading-relaxed">
           Our selection of premium scanners ensures crisp, efficient, and accurate digitization to streamline your document management process.
         </p>
         <div

@@ -27,8 +27,10 @@ const ClientsMarquee = () => {
       <h2 className="text-3xl font-extrabold mt-10 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
         Our Esteemed Clients
       </h2>
-      <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
-
+      <div className="w-24 h-1 mx-auto mb-5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+      <p className="text-center text-gray-300 max-w-2xl mx-auto mb-5 leading-relaxed text-[17px]">
+        We are proud to have partnered with a diverse range of clients across industries, delivering tailored labeling solutions that enhance efficiency, branding, and operational excellence. Our commitment to quality and service has earned the trust of businesses big and small.
+      </p>
       {/* Marquee */}
       <div className="marquee-container">
         <div className="marquee">

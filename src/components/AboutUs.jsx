@@ -5,7 +5,7 @@ const AboutUs = () => {
     <section id="aboutus" className="text-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto">
         {/* Introduction */}
-        <h2 className="text-3xl font-extrabold mt-6 mb-5 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
+        <h2 className="text-3xl font-extrabold mt-5 mb-5 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
         About Us
       </h2>
       <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>

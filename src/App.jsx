@@ -23,6 +23,7 @@ import Services from './components/Services';
 import IndustriesWeServe from './components/IndustriesWeServe';
 import Blog from './components/Blog';
 import Welcome from './components/Welcome';
+import WhyChooseUs from './components/WhyChooseUs';
 
 const App = () => {
   const location = useLocation();
@@ -65,16 +66,16 @@ const App = () => {
               path="/"
               element={
                 <>
-                  <section id="hero"><Hero /></section>
-                  <Stats />
-                  <Business />
-                  <ProductsServices />
-                  <section id="aboutus"><AboutUs /></section>
-                  <InstallationSupport />
-                  <Brands />
-                  <ClientsMarquee />
-                  <Testimonials />
-                  <section id="contactus"><ContactUs/></section>
+                  <section id="hero"><Hero /></section>                
+                  <Stats />                                            
+                  <Brands />                                     
+                  <ProductsServices />                                 
+                  <InstallationSupport />                
+                  <ClientsMarquee />                         
+                  <Testimonials />                                 
+                  <section id="aboutus"><AboutUs /></section>          
+                  <section id="contactus"><ContactUs/></section>      
+
                 </>
               }
             />

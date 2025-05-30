@@ -75,8 +75,8 @@ const Hero = () => {
                 sm:mr-5
                 sm:text-[46px]
                 md:text-[52px]
-                lg:text-[78px]
-                xl:text-[80px]
+                lg:text-[74px]
+                xl:text-[76px]
                 leading-[32px] mt-5 sm:leading-[44px] md:leading-[60px] lg:leading-[80px] xl:leading-[100px]
                 ${className}
                 max-w-full

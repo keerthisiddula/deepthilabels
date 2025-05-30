@@ -9,8 +9,8 @@ const InstallationSupport = () => {
       <h2 className="text-3xl font-extrabold mt-16 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
         Watch Our Printer Installation Walkthrough
       </h2>
-      <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
-      <p className="text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+      <div className="w-24 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+      <p className="text-gray-400 mb-8 text-center max-w-3xl mx-auto text-[18px]">
         We don’t just sell printers — we provide easy setup assistance so you can start printing custom labels without hassle.
       </p>
       <div

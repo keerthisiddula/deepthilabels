@@ -67,13 +67,11 @@ const ContactUs = () => {
       <h2 className="text-3xl font-extrabold mt-10 mb-4 text-center text-gradient bg-gradient-to-r from-green-400 to-teal-600">
         Contact Us
       </h2>
-      <div className="w-24 h-1 mx-auto mb-8 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
-
-      <p style={styles.subheading}>
+      <div className="w-24 h-1 mx-auto mb-5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500"></div>
+      <p className="text-center text-gray-300 max-w-2xl mx-auto mb-5 leading-relaxed text-[17px]">
         Have questions or need assistance? Send us a message and we'll respond
         promptly.
       </p>
-
       <div style={styles.container}>
         {/* Business Details Card */}
         <div style={styles.contactCard}>
@@ -221,7 +219,7 @@ const styles = {
     borderRadius: "10px",
     padding: "20px",
     boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-    minWidth: "280px",
+    minWidth: "240px",
     marginTop: "0",
     marginLeft: "40px",   // Added left margin here
     marginRight: "20px",
@@ -235,7 +233,7 @@ const styles = {
   flex: '1 1 45%',
   display: 'flex',
   flexDirection: 'column',
-  gap: '1rem',
+  gap: '0.8rem',
 },
 
 image: {
@@ -247,7 +245,7 @@ image: {
   label: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: "20px",
+    marginBottom: "18px",
     fontWeight: "600",
     color: "#38B2AC",
   },
@@ -256,7 +254,7 @@ image: {
     fontSize: "1rem",
     borderRadius: "4px",
     border: "1px solid #ccc",
-    marginTop: "8px",
+    marginTop: "2px",
     transition: "border-color 0.3s",
   },
   textarea: {
@@ -264,7 +262,7 @@ image: {
     fontSize: "1rem",
     borderRadius: "4px",
     border: "1px solid #ccc",
-    marginTop: "8px",
+    marginTop: "6px",
     resize: "vertical",
     transition: "border-color 0.3s",
   },
